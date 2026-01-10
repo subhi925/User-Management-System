@@ -1,29 +1,45 @@
-# User Management System – QA & Automation Project
+**Project**
 
-This project demonstrates manual and automated testing on a real web application.
+A small React user-management UI for practicing manual QA and Cypress end-to-end tests.
 
-## Tech Stack
-- React
-- Firebase Authentication
-- Firestore
-- Cypress
+**Goal**
 
-## Features
-- User registration
-- Login
-- Role based access (Admin / User)
-- Admin dashboard
-- User profile
+- Provide clear manual QA steps and a minimal Cypress guide so QA engineers can validate and automate core flows (Login, Register, Profile, Dashboard, Admin).
 
-## QA
-The project includes:
-- Test Plan (STP)
-- Manual Test Cases
-- Bug Reports
-- Cypress E2E tests
+**Requirements**
 
-## Automation
-Cypress tests cover:
-- Login flow
-- Role based redirection
-- Access control
+- Node.js (LTS)
+- npm or yarn
+- Chrome or Chromium for Cypress tests
+
+**Quick Start**
+
+1. Install dependencies:
+
+```bash
+npm install
+# or
+yarn
+```
+
+2. Run the dev server:
+
+```bash
+npm start
+# or
+yarn start
+```
+
+Open the app at http://localhost:3000.
+
+
+**Files of Interest**
+
+- src/commponents/Login.jsx  login UI
+- src/commponents/Register.jsx  registration UI
+- src/commponents/Profile.jsx  profile UI
+- src/commponents/Dashboard.jsx  dashboard view
+
+
+
+
