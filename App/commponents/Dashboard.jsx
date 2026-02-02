@@ -1,4 +1,7 @@
 import React from 'react'
+import { useAuthState } from 'react-firebase-hooks/auth'
+import { auth } from '../fire'
+import { db } from '../fire'
 
 const Dashboard = () => {
   return (

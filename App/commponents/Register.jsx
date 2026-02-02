@@ -2,17 +2,19 @@ import React, { useState } from "react";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { doc, setDoc } from "firebase/firestore";
 import { auth, db } from "../fire";
+import { useNavigate } from "react-router-dom";
 
 const Register = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [name, setName] = useState("");
+  const navigate = useNavigate();
   const handelRegister = async () => {
     try {
       const userCredential = await createUserWithEmailAndPassword(
         auth,
         email,
-        password
+        password,
       );
       const user = userCredential.user;
       await setDoc(doc(db, "users", user.uid), {
@@ -21,6 +23,7 @@ const Register = () => {
         role: "user",
       });
       alert("User Registered Successfully");
+      navigate("/login");
     } catch (err) {
       console.log(err);
     }
